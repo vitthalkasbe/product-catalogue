@@ -1,0 +1,1 @@
+insert into product(id,name,product_type,price,created_at) values(10001,'Vim Bar','Soap',12.29,'2023-09-19 00:17:02.777966')
