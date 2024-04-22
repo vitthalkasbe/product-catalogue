@@ -22,7 +22,7 @@ public class ApplicationExceptionHandler extends ResponseEntityExceptionHandler 
    @ExceptionHandler(ProductNotFoundException.class)
     protected ResponseEntity<ApiResponse> handleProductNotFoundException(ProductNotFoundException ex,WebRequest request) {
         ApiResponse apiResponse=new ApiResponse(ex.getMessage(),request.getDescription(false), LocalDateTime.now());
-        return new ResponseEntity<ApiResponse>(apiResponse,HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(apiResponse,HttpStatus.NOT_FOUND);
     }
 
     @Override
